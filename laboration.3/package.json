@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.2.4"
+    "sass": "^1.97.3",
+    "sharp": "^0.34.5",
+    "vite": "^7.2.4",
+    "vite-plugin-image-optimizer": "^2.0.3"
   }
 }
