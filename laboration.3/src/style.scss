@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(226, 226, 226);
+}
+
+/*Netsling - Header (Rubrik + navmeny)*/
+header {
+background-color: rgb(235, 43, 235);
+padding-top: 1rem;
+padding-bottom: 2rem;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+/*Nestling - navmeny*/
+nav {
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: rgb(240, 223, 202);
+    }
+}
+
+}
