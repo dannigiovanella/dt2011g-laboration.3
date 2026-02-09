@@ -1,5 +1,10 @@
+/*TYPOGRAFI*/
+@use "base/typography";
 
 /*LAYOUTS*/
 
+/*Startsida*/
+@use "pages/homepage";
+
 /*Header*/
-@use "layout/header"
+@use "layout/header";
