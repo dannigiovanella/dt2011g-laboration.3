@@ -1,0 +1,17 @@
+
+/*Bildform*/
+
+@mixin imgform($width, $height, $radius) {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+}
+
+.imgsmall{
+    @include imgform(300px, auto, 10px)
+}
+
+
+.imglarge{
+    @include imgform(400px, auto, 10px);
+}

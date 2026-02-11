@@ -36,10 +36,20 @@ main {
     background-color: variables.$color-light-mainbg;
     border-radius: 5px;
 
-    /*Bredd på main upp till tablet-format*/
-    @media (max-width: 1024px) {
-        width: 90%;
-    }
+}
+
+.pagewrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.bilder{
+    display: flex;
+    flex-direction: column;
+}
+
+figure{
+    margin: 0;
 }
 
 /*Banner som finns på undersidor*/
@@ -77,4 +87,16 @@ footer {
     main {
         background-color: variables.$color-dark-mainbg;
     }
+}
+
+
+/*Mobil-skärm*/
+@media (max-width: 600px){
+    main{
+        width: 100%;
+    }
+
+    .pagewrapper{
+    flex-direction: column;
+}
 }
