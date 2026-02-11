@@ -1,4 +1,6 @@
-
+/*VARIABLER*/
+/*Färgteman*/
+@use "../abstracts/variables";
 
 /*Netsling - Header (Rubrik + navmeny)*/
 header {
@@ -32,10 +34,11 @@ nav {
 
     a {
         text-decoration: none;
+        color: variables.$color-light-nav;
     }
 
     a:hover{
-        color: rgb(240, 223, 202);
+        color: variables.$color-light-navhover;
     }
 }
 
