@@ -6,7 +6,7 @@
 header {
 
 padding-top: 1rem;
-padding-bottom: 2rem;
+padding-bottom: 1rem;
 
     h1 {
         display: flex;
@@ -23,10 +23,14 @@ padding-bottom: 2rem;
 
 /*Nestling - navmeny*/
 nav {
+
     ul {
         display: flex;
-        justify-content: center;
-        gap: 5rem;
+        justify-content: start;
+        gap: 3rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     }
 
     li {

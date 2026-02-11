@@ -15,14 +15,19 @@
 
 /*LAYOUTS*/
 
-/*Startsida*/
-@use "pages/homepage";
-
 /*Header*/
 @use "layout/navigation";
 
-/*STARTSIDA*/
-
 /*Sidolayout*/
 @use "layout/pagelayout";
+
+/*Startsida*/
+@use "pages/homepage";
+
+
+
+
+
+
+
 

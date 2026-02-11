@@ -4,13 +4,7 @@ $bannertype: "start";
 .banner {
     position: relative;
     width: 100%;
-    
-      @if $bannertype == "start" {
-    height: 400px;
-  } @else {
-    height: 150px; 
-  }
-
+    height: 450px;
     max-height: 550px;
     overflow: hidden;
 

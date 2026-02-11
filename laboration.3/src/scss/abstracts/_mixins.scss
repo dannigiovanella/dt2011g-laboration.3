@@ -8,10 +8,10 @@
 }
 
 .imgsmall{
-    @include imgform(300px, auto, 10px)
+    @include imgform(40%, auto, 10px)
 }
 
 
 .imglarge{
-    @include imgform(400px, auto, 10px);
+    @include imgform(90%, auto, 10px);
 }

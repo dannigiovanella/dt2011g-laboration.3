@@ -6,6 +6,7 @@
 
 * {
     box-sizing: border-box;
+
 }
 
 /*Nollställning av marginal och padding*/
@@ -15,9 +16,9 @@ body {
     padding: 0;
 }
 
-    html{
-        background-color: variables.$color-light-hmtlbg;
-    }
+html {
+    background-color: variables.$color-light-hmtlbg;
+}
 
 body {
     max-width: 1700px;
@@ -29,35 +30,43 @@ body {
 /*Layout för main*/
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     flex-direction: column;
-    width: 100%;
     min-height: 100vh;
+    max-width: 100%;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-left: 4rem;
     background-color: variables.$color-light-mainbg;
     border-radius: 5px;
-
 }
 
-.pagewrapper{
+.pagewrapper {
     display: flex;
     flex-direction: row;
-    gap: 6rem;
 }
 
-.bilder{
+.bilder {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-figure{
-    margin: 0;
+figure {
+    margin-bottom: 3rem;
 }
 
-.textwrapper{
+
+.textwrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    background-color: variables.$color-light-textbg;
 }
 
 /*Banner som finns på undersidor*/
@@ -65,7 +74,7 @@ figure{
     position: relative;
     width: 100%;
     height: 10vh;
-    max-height: 550px;
+    max-height: 150px;
     overflow: hidden;
 
     img {
@@ -78,6 +87,30 @@ figure{
     }
 }
 
+/*Knapp för test av if-sats*/
+.testbutton {
+    width: 20%;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    a {
+        color: variables.$color-text;
+        text-decoration: none;
+    }
+
+    /*If-sats*/
+    @if variables.$prefers-dark {
+        background-color: variables.$color-firstbtn;
+    }
+
+    @else {
+        background-color: variables.$color-secondbtn;
+    }
+}
 
 /*Layout för footer*/
 footer {
@@ -92,19 +125,28 @@ footer {
     body {
         color: variables.$color-dark-text;
     }
+
     main {
         background-color: variables.$color-dark-mainbg;
     }
+
+    .textwrapper {
+    background-color: variables.$color-dark-textbg;
+}
 }
 
 
-/*Mobil-skärm*/
-@media (max-width: 600px){
-    main{
+/*Mindre-skärm*/
+@media (max-width: 850px) {
+    main {
         width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
 
-    .pagewrapper{
-    flex-direction: column;
-}
+    .pagewrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
