@@ -1,0 +1,15 @@
+/*Färgteman*/
+@use "../abstracts/variables";
+
+.maintext {
+    width: 65ch;
+    max-width: 75ch
+}
+
+.addon-text {
+    @extend .maintext;
+    background-color: rgb(199, 155, 216);
+    color: variables.$color-light-text;
+    border: 1px solid variables.$color-accent;
+    border-radius: 5px;
+}

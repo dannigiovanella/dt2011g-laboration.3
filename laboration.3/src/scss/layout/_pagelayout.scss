@@ -41,6 +41,7 @@ main {
 .pagewrapper{
     display: flex;
     flex-direction: row;
+    gap: 6rem;
 }
 
 .bilder{
@@ -50,6 +51,11 @@ main {
 
 figure{
     margin: 0;
+}
+
+.textwrapper{
+    display: flex;
+    flex-direction: column;
 }
 
 /*Banner som finns på undersidor*/
