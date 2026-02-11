@@ -38,7 +38,11 @@ nav {
     }
 
     a:hover{
-        color: variables.$color-light-navhover;
+        color: lighten(variables.$color-light-nav, 30%);
+    }
+
+    a.active{
+        color: darken(variables.$color-light-nav, 30%);
     }
 }
 

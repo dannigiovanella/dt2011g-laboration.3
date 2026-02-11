@@ -3,6 +3,7 @@
 @use "../abstracts/variables";
 
 
+
 * {
     box-sizing: border-box;
 }
@@ -14,9 +15,9 @@ body {
     padding: 0;
 }
 
-html {
-    background-color: variables.$color-light-hmtlbg;
-}
+    html{
+        background-color: variables.$color-light-hmtlbg;
+    }
 
 body {
     max-width: 1700px;
@@ -59,6 +60,7 @@ main {
     }
 }
 
+
 /*Layout för footer*/
 footer {
     padding-left: 1rem;
@@ -68,6 +70,7 @@ footer {
 
 /*MÖRKT TEMA*/
 @media (prefers-color-scheme: dark) {
+
     body {
         color: variables.$color-dark-text;
     }
