@@ -4,6 +4,7 @@
 
 /*Netsling - Header (Rubrik + navmeny)*/
 header {
+
 padding-top: 1rem;
 padding-bottom: 2rem;
 
@@ -46,4 +47,49 @@ nav {
     }
 }
 
+
+}
+
+/*Döljer hamburharen i desktopläge*/
+.hamburger {
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+
+
+ /*Storlek, styling och position för hamburgerikon*/
+    .hamburger {
+        display: block;
+        font-size: 3rem;
+        background: none;
+        border: none;
+        color: variables.$color-light-nav;
+        padding-left: 2rem;
+        padding-top: 1rem;
+    }
+
+    /*Döljer navbaren för desktop*/
+    .navbar ul {
+        display: none;
+        background-color: transparent;
+        padding-left: 2rem;
+    }
+
+    /*Färg och position för menylänkar*/
+    .navbar ul li a {
+        display: block;
+        color: variables.$color-light-nav;
+        padding-bottom: 1rem;
+    }
+
+    .navbar ul li a:hover {
+        color: lighten(variables.$color-light-nav, 30%);
+    }
+
+    /*Visar menyn när hamburgaren är klickad*/
+    .navbar ul.show {
+        display: block;
+    }
 }

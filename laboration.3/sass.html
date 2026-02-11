@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/scss/main.scss">
-    <title>Sass</title>
-</head>
-<body>
 
-        <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Start</a></li>
-          <li><a href="sass.html" class="active">Sass</a></li>
-          <li><a href="#">Animation</a></li>
-          <li><a href="#">Diagram</a></li>
-          <li><a href="#">Karta</a></li>
-        </ul>
-      </nav>
-    </header>
-      <div class="banner2">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/scss/main.scss">
+  <title>Sass</title>
+</head>
+
+<body>
+  <header>
+    <!--Hamburgerikon för many till mindre skärm-->
+    <button class="hamburger">&#9776;</button>
+    
+    <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="sass.html" class="active">Sass</a></li>
+      <li><a href="#">Animation</a></li>
+      <li><a href="#">Diagram</a></li>
+      <li><a href="#">Karta</a></li>
+    </ul>
+  </nav>
+  </header>
+  <div class="banner2">
     <img src="/images/banner2.webp" alt="">
   </div>
-    <main>
-<h1>SASS</h1>
-<div class="pagewrapper">
-  <div class="textwrapper">
-<p class="maintext" >hej</p>
-<p class="addon-text" >hej</p>
-  </div>
-<div class="bilder">
-<figure>
-<img src="/images/bild1.webp" alt="" class="imglarge">
-<figcaption>Använder mixin för stora bilder</figcaption>
-</figure>
-<img src="/images/bild2.webp" alt="" class="imgsmall">
-<figcaption>Använder mixin för små bilder</figcaption>
-</figure>
-</div>
-</div>
-    </main>
-    <footer>
-  <p><strong>Sida skapad av:</strong></p>
-  <p>Daniela Giovanella<br>dagi2500@student.miun.se</p>
-</footer>
-    <script type="module" src="/src/main.js"></script>
+  <main>
+    <h1>SASS</h1>
+    <div class="pagewrapper">
+      <div class="textwrapper">
+        <p class="maintext">hej</p>
+        <p class="addon-text">hej</p>
+      </div>
+      <div class="bilder">
+        <figure>
+          <img src="/images/bild1.webp" alt="" class="imglarge">
+          <figcaption>Använder mixin för stora bilder</figcaption>
+        </figure>
+        <figure>
+          <img src="/images/bild2.webp" alt="" class="imgsmall">
+          <figcaption>Använder mixin för små bilder</figcaption>
+        </figure>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p><strong>Sida skapad av:</strong></p>
+    <p>Daniela Giovanella<br>dagi2500@student.miun.se</p>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
