@@ -1,12 +1,13 @@
 
 /*FÄRGTEMAN*/
+@use "sass:color";
+ 
 
 /*Ljust Färgtema*/
 
-$color-light-hmtlbg: rgb(41, 15, 75);
+$color-light-hmtlbg: rgb(27, 8, 53);
 $color-light-mainbg: rgb(225, 220, 230);
 $color-light-text:rgb(14, 13, 13);
-$color-light-nav:rgb(218, 142, 228);
 $color-light-textbg: rgb(201, 189, 212);
 $color-ligt-footer: rgb(182, 170, 197);
 
@@ -15,9 +16,13 @@ $color-dark-mainbg: rgb(14, 14, 14);
 $color-dark-text:rgb(237, 232, 241);
 $color-dark-textbg: rgba(5, 1, 7, 0.418);
 
-/*Accentfärg*/
-$color-accent: rgb(178, 6, 201);
 
+/*Navmeny- färgskala*/
+$color-nav:rgb(209, 154, 216);
+/*Hover*/
+$color-nav-hover: color.scale($color-nav, $lightness: 30%);
+/*Active*/
+$color-nav-active: color.scale($color-nav, $lightness: -30%);
 
 /*VARIABEL FÖR TEST AV IF-SATS FÖR KNAPP*/
 $prefers-dark: true;

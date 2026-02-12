@@ -87,30 +87,7 @@ figure {
     }
 }
 
-/*Knapp för test av if-sats*/
-.testbutton {
-    width: 20%;
-    padding: 1rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
 
-    a {
-        color: variables.$color-text;
-        text-decoration: none;
-    }
-
-    /*If-sats*/
-    @if variables.$prefers-dark {
-        background-color: variables.$color-firstbtn;
-    }
-
-    @else {
-        background-color: variables.$color-secondbtn;
-    }
-}
 
 /*Layout för footer*/
 footer {
