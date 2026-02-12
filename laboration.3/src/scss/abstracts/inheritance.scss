@@ -1,13 +1,17 @@
 /*Färgteman*/
 @use "../abstracts/variables";
 
+
+/*EX på att använda extend vid text*/
 .maintext {
     max-width: 65ch
 }
 
+/*Tilläg på en text för att få den att sticka ut*/
 .addon-text {
     @extend .maintext;
-    background-color: rgba(199, 155, 216, 0.685);
+    background-color: rgba(199, 155, 216, 0.836);
     color: variables.$color-light-text;
     border-radius: 5px;
+    padding: 0.7rem;
 }

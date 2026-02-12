@@ -16,10 +16,12 @@ body {
     padding: 0;
 }
 
+/*Bakgrundsfärg för hela sidan*/
 html {
     background-color: variables.$color-light-hmtlbg;
 }
 
+/*Storlek och position för body*/
 body {
     max-width: 1700px;
     display: block;
@@ -41,11 +43,13 @@ main {
     border-radius: 5px;
 }
 
+/*Huvud-layout för alla sidor*/
 .pagewrapper {
     display: flex;
     flex-direction: row;
 }
 
+/*Wrapper för bilder på SASS-sidan*/
 .bilder {
     display: flex;
     flex-direction: column;
@@ -53,20 +57,50 @@ main {
     align-items: center;
     width: 100%;
 }
-
+/*Skapar mellanrum mellan bilderna*/
 figure {
     margin-bottom: 3rem;
 }
+/*Maxbredd på listor*/
+ul {
+    max-width: 65ch;
 
+}
+/*Luft mellan li-element*/
+li {
+    padding-bottom: 0.5rem;
+}
 
+/*Wrapper för all text*/
 .textwrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     margin-bottom: 2rem;
     background-color: variables.$color-light-textbg;
+}
+/*Alternativ wrapper för text på startsida*/
+.alt-textwrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    width: 80%;
+    min-height: 60vh;
+    border-radius: 10px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+    background-color: variables.$color-light-textbg;
+
+    p{
+        max-width: 75ch;
+        padding-bottom: 5rem;
+    }
 }
 
 /*Banner som finns på undersidor*/
@@ -96,6 +130,8 @@ footer {
     color: variables.$color-ligt-footer;
 }
 
+/*///// MEDIA QUERIES /////*/
+
 /*MÖRKT TEMA*/
 @media (prefers-color-scheme: dark) {
 
@@ -108,13 +144,18 @@ footer {
     }
 
     .textwrapper {
-    background-color: variables.$color-dark-textbg;
-}
+        background-color: variables.$color-dark-textbg;
+    }
+
+    .alt-textwrapper {
+        background-color: variables.$color-dark-textbg;
+    }
+
 }
 
 
-/*Mindre-skärm*/
-@media (max-width: 850px) {
+/*Layout för mindre-skärm (ner till mobile)*/
+@media (max-width: 1024px) {
     main {
         width: 100%;
         padding-right: 1rem;
@@ -126,4 +167,15 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
+    .textwrapper{
+        width: 100%;
+    }
+
+    .alt-textwrapper{
+        width: 100%;
+    }
+
+
+
 }

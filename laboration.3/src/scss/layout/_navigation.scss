@@ -2,28 +2,11 @@
 /*Färgteman*/
 @use "../abstracts/variables";
 
-/*Netsling - Header (Rubrik + navmeny)*/
-header {
 
-padding-top: 1rem;
-padding-bottom: 1rem;
-
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 3rem;
-    }
-
-    p {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
 /*Nestling - navmeny*/
 nav {
-
+/*Styling för navmeny*/
     ul {
         display: flex;
         justify-content: start;
@@ -36,7 +19,7 @@ nav {
     li {
         list-style: none;
     }
-
+/*Färg hämtas enligt färgschema i variabler*/
     a {
         text-decoration: none;
         color: variables.$color-nav;
@@ -52,7 +35,7 @@ nav {
 }
 
 
-}
+
 
 /*Döljer hamburharen i desktopläge*/
 .hamburger {
@@ -72,6 +55,7 @@ nav {
         color: variables.$color-nav;
         padding-left: 2rem;
         padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     /*Döljer navbaren för desktop*/
@@ -89,7 +73,7 @@ nav {
     }
 
     .navbar ul li a:hover {
-        color: lighten(variables.$color-nav, 30%);
+        color: variables.$color-nav-hover;
     }
 
     /*Visar menyn när hamburgaren är klickad*/

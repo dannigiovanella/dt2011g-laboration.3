@@ -15,7 +15,7 @@ export default defineConfig({
     ViteImageOptimizer({
 
       webp:{
-        quality: 75
+        quality: 80
       }
 
     })

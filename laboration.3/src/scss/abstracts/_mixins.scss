@@ -1,17 +1,17 @@
 
 /*Bildform*/
-
 @mixin imgform($width, $height, $radius) {
     width: $width;
     height: $height;
     border-radius: $radius;
 }
 
+/*Regler för små bilder*/
 .imgsmall{
     @include imgform(40%, auto, 10px)
 }
 
-
+/*Regler för stora bilder*/
 .imglarge{
     @include imgform(90%, auto, 10px);
 }

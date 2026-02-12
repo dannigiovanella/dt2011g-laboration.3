@@ -12,35 +12,84 @@
   <header>
     <!--Hamburgerikon för many till mindre skärm-->
     <button class="hamburger">&#9776;</button>
-    
+    <!--Navigationsmeny-->
     <nav class="navbar">
-    <ul>
-      <li><a href="index.html">Start</a></li>
-      <li><a href="sass.html" class="active">Sass</a></li>
-      <li><a href="#">Animation</a></li>
-      <li><a href="#">Diagram</a></li>
-      <li><a href="#">Karta</a></li>
-    </ul>
-  </nav>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="sass.html" class="active">Sass</a></li>
+        <li><a href="#">Animation</a></li>
+        <li><a href="#">Diagram</a></li>
+        <li><a href="#">Karta</a></li>
+      </ul>
+    </nav>
   </header>
+  <!--bannerbild-->
   <div class="banner2">
     <img src="/images/banner.webp" alt="">
   </div>
   <main>
+    <!--Huvudrubrik-->
     <h1>SASS</h1>
     <div class="pagewrapper">
       <section class="textwrapper">
-        <p class="maintext">hej</p>
-        <p class="addon-text">hej</p>
+        <!--Reflektion av arbete med SASS-->
+        <h2>Arbetet med SASS</h2>
+        <p class="maintext">I laboration 3 har SASS använts som CSS-processor där syftet varit att utforska hur man kan
+          skriva en mer modulär och återanvändbar CSS-kod och förstå hur bland annat variabler, mixins och nesting
+          fungerar i praktiken. Att arbeta med SASS har fungerat bra, men det är tydligt att det krävs övning i att
+          hantera detta på ett sätt där arbetet blir mer effektivt än med vanlig CSS.</p>
+        <!--Lista på vad som gjorts-->
+        <h3>Hur SASS använts</h3>
+        <p class="maintext">I arbetet har jag använt SASS för följande:</p>
+        <ul>
+          <li><strong>Partials: </strong>Flera scss-filer för olika delar och komponenter i webbplatsen.</li>
+          <li><strong>Variabler: </strong>För färgscheman för ljust/mörkt (darken/lighten), navigationsmeny och knappar.
+          </li>
+          <li><strong>Mixins: </strong>Två olika set med regler som sätt för två olika bildstorlekar.</li>
+          <li><strong>Nesting: </strong>För att gruppera och lättare skriva ut koden för navigation och banner.</li>
+          <li><strong>Selector inheritance (@extend): </strong>Har på ett enkelt sätt använt detta för grundinställning
+            på text, och har sedan lagt extended med ytterligare regler bland annat bakgrundsfärg för en "add on"- text
+            som kan ses i exemplet nedan.</li>
+          <li><strong>If/else: </strong>För olika regler som styr färg på knapp.</li>
+        </ul>
+        <!--Fördelar med SASS-->
+        <h3>Fördelar</h3>
+        <p class="maintext">Genom att använda SASS har utvecklingsarbetet underlättats på flera sätt. Det blir enklare
+          att genomföra ändringar på hela webbplatsen genom att använda sig av variabler där ändring bara behöver ske i
+          just dessa.</p>
+        <p class="maintext">Det är enkelt att sätta samma stil/regler för separata element utan att behöve upprepa samma
+          kod, detta med hjälp av mixins.</p>
+        <p class="maintext">Det som har underlättat mest i arbetet är dock uppdelning av kod i partials vilket har gjort
+          betydligt mer överskåldigt än i tidigare projekt.</p>
+        <!--Nackdelar med SASS-->
+        <h3>Utmaningar/Nackdelar</h3>
+        <p class="maintext">Men det fanns även vissa utmaningar. Initialt var det klurigt att förstå hur bland annat
+          variabler skulle refereras till och vad som krävdes för att innehållet som skapats i separata partials skulle
+          kunna gå att användas på flera ställen.</p>
+        <p class="maintext">Innan detta klurats ut var det även svårt att ge en bra struktur till flera partials. 7-1
+          strukturen användes till en början, men kändes snabbt överflödig för projektet. Det var även svårt att med
+          invanda mönster med upplägg i vanlig CSS-fil tänka om vart logisk för olika delar bland annat media queries
+          bör ligga. Detta är något som i nuläget är den största bristen i min filstruktur, och behöver filas på.</p>
+        <p class="maintext">Nackdelar för en som inte har vanan inne är att det kan vara svårt att förstå poängen med
+          if-satser framför tex media queries. Men detta ser jag kan bli tydligare vid större projekt och mer kod som
+          ska hanteras och effektiviseras. Men här var det svårt att hitta ett användningsormråde där det var smidigare
+          att använda if-sats.</p>
+          <!--En tilläggstext för vad som bör tänkas på. (test av inherit)-->
+        <p class="addon-text">Att tänka på vidare för kommande projekt där SASS används är att från början skapa en god
+          struktur för filer med en plan på vart varje del eller komponent ska ligga för att underlätta i
+          utvecklingsarbetet och faktiskt dra nytta av funktionenen med att använda sig av partials. Initialt var det
+          klurigt att förstå hur bland annat variabler skulle refereras till och vad som krävdes för att innehållet som
+          skapats i separata partials skulle kunna gå att användas på flera ställen.</p>
       </section>
+      <!--Bildsektion-->
       <div class="bilder2">
         <figure>
-          <img src="/images/bild1.webp" alt="" class="imglarge">
-          <figcaption>Använder mixin för stora bilder</figcaption>
+          <img src="/images/bild1.webp" alt="Två dataskrämar som visar ett kodprojekt" class="imglarge">
+          <figcaption>Mixin för stora bilder</figcaption>
         </figure>
         <figure>
-          <img src="/images/bild2.webp" alt="" class="imgsmall">
-          <figcaption>Använder mixin för små bilder</figcaption>
+          <img src="/images/bild2.webp" alt="Skärm som visar SASS-kod" class="imgsmall">
+          <figcaption>Mixin för små bilder</figcaption>
         </figure>
       </div>
     </div>

@@ -24,8 +24,10 @@ $color-nav-hover: color.scale($color-nav, $lightness: 30%);
 /*Active*/
 $color-nav-active: color.scale($color-nav, $lightness: -30%);
 
+
 /*VARIABEL FÖR TEST AV IF-SATS FÖR KNAPP*/
-$prefers-dark: true;
+$buttontheme: "dark";
+
 /*Knappfärger*/
 $color-firstbtn: rgb(41, 15, 75);
 $color-secondbtn: rgb(201, 76, 218);
