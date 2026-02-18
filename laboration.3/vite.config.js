@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         pictures: resolve(__dirname, "sass.html"),
+        animation: resolve(__dirname, "animation.html")
       }
     }
   },
