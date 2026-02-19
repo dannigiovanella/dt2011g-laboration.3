@@ -1,3 +1,5 @@
+/*Animationer*/
+@use "abstracts/animations";
 
 /*MIXINS*/
 @use "abstracts/mixins";
@@ -26,6 +28,9 @@
 
 /*Startsida*/
 @use "pages/homepage";
+
+/*Animationer*/
+@use "abstracts/animations"
 
 
 
