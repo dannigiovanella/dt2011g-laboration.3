@@ -17,3 +17,14 @@ hamburger.addEventListener('click',
     //CSS styr ul med "show" och om och hur menyn ska visas 
     menu.classList.toggle('show');
   });
+
+
+//Trigger för animation på knapp (animation.html)
+
+//Hämtar id för knapp
+const animatedButton = document.querySelector('.animatedbutton');
+
+//Händelselyssnare. Lyssnar på klick av knapp
+animatedButton.addEventListener('click', () => {
+  animatedButton.classList.add('clicked');
+});

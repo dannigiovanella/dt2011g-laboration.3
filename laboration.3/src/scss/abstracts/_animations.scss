@@ -1,0 +1,45 @@
+/*Färgteman*/
+@use "../abstracts/variables";
+
+.h1animation{
+font-size: 1.8rem;
+}
+
+.movingbox{
+width: 20rem;
+height: 20rem;
+background-color: variables.$color-firstbtn;
+border-radius: 10px;
+margin: 0 auto;
+margin-bottom: 3rem;
+}
+
+
+/*Knapp som används för test av animering*/
+/*Hovereffekt och rotering*/
+.animatedbutton{
+background-color: variables.$color-firstbtn;
+color: variables.$color-text;
+width: 20rem;
+padding-top: 1.5rem;
+padding-bottom: 1.5rem;
+border-radius: 7px;
+font-size: 1.2rem;
+margin: 0 auto;
+margin-bottom: 2rem;
+}
+
+.animatedbutton.clicked {
+    animation: rotatingbutton 0.8s ease;
+}
+
+@keyframes rotatingbutton {
+  0% { transform: rotate(0); }
+  10% { transform: rotate(10deg); }
+  20% { transform: rotate(20deg); }
+  50% { transform: rotate(50deg); }
+  70% { transform: rotate(90deg); }
+  80% { transform: rotate(150deg); }
+  90% { transform: rotate(250deg); }
+  100% { transform: rotate(360deg); }
+}
