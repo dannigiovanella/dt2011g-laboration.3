@@ -12,8 +12,26 @@ background-color: variables.$color-firstbtn;
 border-radius: 10px;
 margin: 0 auto;
 margin-bottom: 3rem;
+transition: 0.9s ease;
 }
 
+/*Flyttar boxen uppåt vid hovring*/
+.movingbox:hover{
+    animation: movethebox 1.8s ease-in-out;
+    background-color: variables.$color-secondbtn;
+}
+
+@keyframes movethebox {
+    0%{
+        transform: translate(0, 0);
+    }
+    50%{
+        transform: translate(0, -150px);
+    }
+    100%{
+       transform: translate(0, 0); 
+    }
+}
 
 /*Knapp som används för test av animering*/
 /*Hovereffekt och rotering*/
