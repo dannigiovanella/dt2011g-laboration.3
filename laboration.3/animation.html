@@ -2,6 +2,7 @@
 <html lang="sv">
 
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/scss/main.scss">
@@ -35,6 +36,59 @@
         <p>Daniela Giovanella<br>dagi2500@student.miun.se</p>
     </footer>
     <script type="module" src="/src/main.js"></script>
+=======
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/scss/main.scss">
+  <title>Sass</title>
+</head>
+
+<body>
+  <header>
+    <!--Hamburgerikon för many till mindre skärm-->
+    <button class="hamburger">&#9776;</button>
+    <!--Navigationsmeny-->
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="animation.html" class="active">Animation</a></li>
+        <li><a href="#">Diagram</a></li>
+        <li><a href="#">Karta</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--bannerbild-->
+  <div class="banner2">
+    <img src="/images/banner.webp" alt="">
+  </div>
+  <main>
+    <!--Huvudrubrik med animation-->
+    <h1 class="h1animation">Animation</h1>
+    <div class="pagewrapper">
+    <section class="textwrapper">
+      <h2>Vilka animationer finns på sidan?</h2>
+      <ul>
+        <li>Huvudrubrik har fått en animation med keyframe där text förstoras och fått glow vid hovring med scale och text-shadow.</li>
+        <li>Med transform och translate förflyttar sig boxen upp och ner på sidan.</li>
+        <li>Knapp ändar färg och storlek vid hovring med transition och transform.</li>
+        <li>Knapp roterar vid klick (fungerar vid ett första klick). Interaktionshändelsen är skapad med JavaScript, Keyframes och transform.</li>
+      </ul>
+    </section>
+    <div class="bilder">
+    <!--En box som flyttar sig med animation-->
+    <div class="movingbox"></div>
+    <!--Knapp med hovereffekt och js-triggande animation-->
+    <button class="animatedbutton">Klicka</button>
+    </div>
+    </div>
+  </main>
+  <footer>
+    <p><strong>Sida skapad av:</strong></p>
+    <p>Daniela Giovanella<br>dagi2500@student.miun.se</p>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+>>>>>>> development
 </body>
 
 </html>
