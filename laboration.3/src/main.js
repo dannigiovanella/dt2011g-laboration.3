@@ -52,7 +52,6 @@ async function getStatistics() {
     );
     //Konverterar datan till javascript-objekt
     const statistics = await response.json();
-
     //Arrayer för kurser och program samt sökande
     const courseStat = [];
     const programStat = [];
@@ -63,23 +62,41 @@ async function getStatistics() {
         //pushar objekt med kursstatistik till array
         courseStat.push({
           name: statistics[i].name,
-          applicants: Number(statistics[i].applicantsTotal)
+          applicants: Number(statistics[i].applicantsTotal.trim())
         });
       } else if (statistics[i].type === "Program") {
         //Pushar objekt med programstatistik till array
         programStat.push({
           name: statistics[i].name,
-          applicants: Number(statistics[i].applicantsTotal)
+          applicants: Number(statistics[i].applicantsTotal.trim())
         });
       }
     }
+
+    //Sortering av toppval
+
+    //Sorterar i mest sökande kurser först
+    courseStat.sort((a, b) => b.applicants - a.applicants);
+    //Plockar ut de 6 första och lägger i array
+    topCourses = courseStat.slice(0, 6);
+
+    //...program
+    programStat.sort((a, b) => b.applicants - a.applicants);
+    //Lägger till top fem i array
+    topPrograms = programStat.slice(0, 5);
+
+    console.log("Toppkurser:", topCourses);
+    console.log("Toppprogram:", topPrograms);
 
     //Felmeddelande som visas om datan inte läses in korrekt. eller annat fel
   } catch (error) {
     console.error("Fel vid hämtning av statistik", error);
   }
+
 }
 
+//Kallar på funktionen
+getStatistics();
 
 
 //Stapeldiagram - kursinformation
