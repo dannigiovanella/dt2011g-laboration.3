@@ -88,6 +88,50 @@ async function getStatistics() {
     console.log("Toppkurser:", topCourses);
     console.log("Toppprogram:", topPrograms);
 
+    //RITAR UT DIAGRAM
+
+//Stapeldiagram - kursinformation
+const chartOne = document.querySelector(".barchart");
+
+if (chartOne) {
+  let options = {
+    chart: {
+      type: 'bar'
+    },
+    //plockar ut värden från objektet i topCourses(map)
+    series: [{
+      name: 'Antal sökande',
+      data: topCourses.map(course => course.applicants)
+    }],
+    xaxis: {
+      categories: topCourses.map(course => course.name)
+    }
+  };
+
+  let chart = new ApexCharts(chartOne, options);
+  chart.render();
+}
+
+
+    //Cirkeldiagram -  programinformation
+    const chartTwo = document.querySelector(".piechart");
+
+    if (chartTwo) {
+      let options = {
+        chart: {
+          type: 'pie',
+        },
+        //plockar ut värden från objektet i topPrograms(map)
+        series: topPrograms.map(programs => programs.applicants),
+        labels: topPrograms.map(programs => programs.name)
+      }
+
+      let chart = new ApexCharts(chartTwo, options);
+      chart.render();
+    }
+
+
+
     //Felmeddelande som visas om datan inte läses in korrekt. eller annat fel
   } catch (error) {
     console.error("Fel vid hämtning av statistik", error);
@@ -99,40 +143,5 @@ async function getStatistics() {
 getStatistics();
 
 
-//Stapeldiagram - kursinformation
-const chartOne = document.querySelector(".barchart");
 
-if (chartOne) {
-  let options1 = {
-    chart: {
-      type: 'bar'
-    },
-    series: [{
-      name: 'sales',
-      data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
-    }],
-    xaxis: {
-      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-    }
-  };
-
-  let chart = new ApexCharts(chartOne, options1);
-  chart.render();
-}
-
-//Cirkeldiagram -  programinformation
-const chartTwo = document.querySelector(".piechart");
-
-if (chartTwo) {
-  let options = {
-    chart: {
-      type: 'pie',
-    },
-    series: [44, 55, 13, 33],
-    labels: ['Apple', 'Mango', 'Orange', 'Watermelon']
-  }
-
-  let chart = new ApexCharts(chartTwo, options);
-  chart.render();
-}
 
