@@ -54,26 +54,25 @@ async function getStatistics() {
     const statistics = await response.json();
 
     //Arrayer för kurser och program samt sökande
-    const courseName = [];
-    const courseApplicants = [];
-    const programName = [];
-    const programApplicants = [];
+    const courseStat = [];
+    const programStat = [];
 
 
     for (let i = 0; i < statistics.length; i++) {
       if (statistics[i].type === "Kurs") {
-        //pushar kursnamn till array
-        courseName.push(statistics[i].name);
-        //pushar antal sökande till array
-        courseApplicants.push(Number(statistics[i].applicantsTotal));
+        //pushar objekt med kursstatistik till array
+        courseStat.push({
+          name: statistics[i].name,
+          applicants: Number(statistics[i].applicantsTotal)
+        });
       } else if (statistics[i].type === "Program") {
-        //Pushar program till array
-        programName.push(statistics[i].name);
-        //pushar antal sökande till array
-        programApplicants.push(Number(statistics[i].applicantsTotal));
+        //Pushar objekt med programstatistik till array
+        programStat.push({
+          name: statistics[i].name,
+          applicants: Number(statistics[i].applicantsTotal)
+        });
       }
     }
-
 
     //Felmeddelande som visas om datan inte läses in korrekt. eller annat fel
   } catch (error) {
