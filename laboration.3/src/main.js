@@ -30,30 +30,73 @@ const animatedButton = document.querySelector('.animatedbutton');
 
 //Händelselyssnare. Lyssnar på klick av knapp
 if (animatedButton) {
-animatedButton.addEventListener('click', () => {
-  animatedButton.classList.add('clicked');
-});
+  animatedButton.addEventListener('click', () => {
+    animatedButton.classList.add('clicked');
+  });
 }
 
 // DIAGRAM (APEX)
 import ApexCharts from "apexcharts";
 
-//Stapeldiagram
+//Globala varibaler att spara toppkurser och program
+let topCourses = [];
+let topPrograms = [];
 
+//Hämtar kursinformation
+
+async function getStatistics() {
+  try {
+    //Väntar in svar från url med kurser
+    const response = await fetch(
+      "https://mallarmiun.github.io/Frontend-baserad-webbutveckling/Moment%205%20-%20Dynamiska%20webbplatser/statistik_sokande_ht25.json"
+    );
+    //Konverterar datan till javascript-objekt
+    const statistics = await response.json();
+
+    //Arrayer för kurser och program samt sökande
+    const courseName = [];
+    const courseApplicants = [];
+    const programName = [];
+    const programApplicants = [];
+
+
+    for (let i = 0; i < statistics.length; i++) {
+      if (statistics[i].type === "Kurs") {
+        //pushar kursnamn till array
+        courseName.push(statistics[i].name);
+        //pushar antal sökande till array
+        courseApplicants.push(Number(statistics[i].applicantsTotal));
+      } else if (statistics[i].type === "Program") {
+        //Pushar program till array
+        programName.push(statistics[i].name);
+        //pushar antal sökande till array
+        programApplicants.push(Number(statistics[i].applicantsTotal));
+      }
+    }
+
+
+    //Felmeddelande som visas om datan inte läses in korrekt. eller annat fel
+  } catch (error) {
+    console.error("Fel vid hämtning av statistik", error);
+  }
+}
+
+
+
+//Stapeldiagram - kursinformation
 const chartOne = document.querySelector(".barchart");
 
 if (chartOne) {
-
   let options1 = {
     chart: {
       type: 'bar'
     },
     series: [{
       name: 'sales',
-      data: [30,40,35,50,49,60,70,91,125]
+      data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
     }],
     xaxis: {
-      categories: [1991,1992,1993,1994,1995,1996,1997,1998,1999]
+      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
     }
   };
 
@@ -61,7 +104,7 @@ if (chartOne) {
   chart.render();
 }
 
-//Cirkeldiagram
+//Cirkeldiagram -  programinformation
 const chartTwo = document.querySelector(".piechart");
 
 if (chartTwo) {
@@ -69,10 +112,11 @@ if (chartTwo) {
     chart: {
       type: 'pie',
     },
-       series: [44, 55, 13, 33],
+    series: [44, 55, 13, 33],
     labels: ['Apple', 'Mango', 'Orange', 'Watermelon']
   }
 
-    let chart = new ApexCharts(chartTwo, options);
+  let chart = new ApexCharts(chartTwo, options);
   chart.render();
 }
+
