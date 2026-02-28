@@ -96,7 +96,8 @@ const chartOne = document.querySelector(".barchart");
 if (chartOne) {
   let options = {
     chart: {
-      type: 'bar'
+      type: 'bar',
+      height: 700
     },
     //plockar ut värden från objektet i topCourses(map)
     series: [{
@@ -120,6 +121,7 @@ if (chartOne) {
       let options = {
         chart: {
           type: 'pie',
+          height: 500,
         },
         //plockar ut värden från objektet i topPrograms(map)
         series: topPrograms.map(programs => programs.applicants),
@@ -143,5 +145,13 @@ if (chartOne) {
 getStatistics();
 
 
+// KARTA //
 
+
+const map = L.map('map').setView([51.505, -0.09], 13);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 
