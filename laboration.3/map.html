@@ -37,14 +37,16 @@
   <main>
     <h1>Karta</h1>
     <section>
-      <h2>Sök efter destination</h2>
-
+      <h2>Sök efter position</h2>
+      <!--Formulär med sökfält att kunna söka position-->
       <form id="searchinput">
         <input type="text" id="search" name="search" placeholder="Sök plats" required>
         <button type="submit">Sök</button>
       </form>
+      <!--Inbäddad karta från openstreetmap. Vid laddninga av sida visas stockholm (bbox kordinater)-->
+      <iframe id="map"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=18.0186,59.2793,18.1186,59.3793"></iframe>></iframe>
 
-      <div id="map"></div>
     </section>
   </main>
   <footer>
