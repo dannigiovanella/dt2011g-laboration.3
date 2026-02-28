@@ -151,26 +151,4 @@ getStatistics();
 
 // KARTA //
 
-//Skapar kartobjekt med en startposition. koordinater och zoom-level
-const map = L.map('map').setView([51.505, -0.09], 13);
 
-//Hämtar bild på karta från openstreetmap och lägger på kartobjektet
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-//Platsmarkerare med kordinater
-const marker = L.marker([51.5, -0.09]).addTo(map);
-
-
-//Sökfunktion - Hämta koordinater från sökinput
-
-//Hämtar id från sökormulär. Eventlyssnare på knapp för sök. Stoppar sida från att laddas om
-document.querySelector('#searchinput').addEventListener('submit', function(nonReload) {
-  nonReload.preventDefault();
-
-  //Variabel för värdet i input
-  const location = document.querySelector('#search').value;
-  console.log("Användaren sökte på", location);
-})
